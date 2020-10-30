@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+
+{% for list in todolists %}
+
+{% if list == "None" %}
+<p> </p>
+{% elif list == False %}
+<p> </p>
+{% elif list != "None" %}
+<p>Left: {{ list }}</p>
+{% endif %}
+
+{% endfor %}
+<form action="/delete" method="POST">
+    <button>Delete</button>
+</form>
+{% endblock %}

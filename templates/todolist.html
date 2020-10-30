@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+<form action="/todolist" method="POST">
+    {{username}}<br>
+    <label>To DO List</label>
+    <input type="text" placeholder="To Do List"name="Todolist"><br>
+    <input type="submit">
+</form>
+
+
+<p>to do list: {{ todolists }}</p>
+
+<form action="/delete" method="POST">
+    <button>Delete</button>
+</form>
+{% endblock %}
